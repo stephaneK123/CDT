@@ -5,9 +5,10 @@
 ### Added or Changed
 - Added this changelog :)
 - 11/18/2021 
-    -Added audio notifications
-    -Removerd options and photo sections
+    -Added audio notifications -pv
+    
 
 
 ### Removed
 
+- Removeed options and photo sections -pv
