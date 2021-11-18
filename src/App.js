@@ -18,7 +18,9 @@ const App =() => {
             projectID="6c0acb84-1640-40bb-861c-7cb8cb4ac5e1"  //Project ID from the chatEngine.io project settings
             userName={localStorage.getItem('username')}       //userName- get from localstorage
             userSecret={localStorage.getItem('password')}     //userSecret- get from localstorage
-            
+            onNewMessage={() => new Audio('https://chat-engine-assets.s3.amazonaws.com/click.mp3').play()} //Audio notification for new message
+            renderOptionsSettings={(creds, chat) => < div /> }  //Removed options section: returns a blank div
+            renderPhotosSettings={(creds, chat) => < div />}    //Removed photos section: returns a blank div
         />    
     );
 };
