@@ -12,13 +12,12 @@ const PollSettings = () => {
     const { chats, activeChat } = useContext(ChatEngineContext)  
     const chat = chats && chats[activeChat] 
 
-    if (!chat) return <div />
 
-    function renderPolls(attachments) {
-        return attachments.map((attachment, index) => {
-            return <Thumbnail key={`person_${index}`} attachment={attachment} />
-        })
-    }
+     /* Build a poll */
+   function buildPoll() {
+    const url ="https://strawpoll.com/en/create/";
+    window.open(url, '_isBlank');
+  }
 
     return (
         <div style={{ borderTop: '1px solid #f0f0f0' }} className='ce-photo-section'>
@@ -28,15 +27,12 @@ const PollSettings = () => {
             >
 
                     <Button 
+                        onClick={buildPoll}
                         value="Create Poll" 
                         id='poll-button'
                         style={{ width: '100%', marginBottom: '12px' }}
                     />  
-                <div className='poll-feed'>
-                    <div style={{ height: '12px' }} />
-
-                    { renderPolls(chat.attachments) }
-                </div>
+              
             </SettingsBlock>
         </div>
     )
