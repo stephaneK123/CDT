@@ -22,7 +22,7 @@ const App =() => {
             userName={localStorage.getItem('username')}       //userName- get from localstorage
             userSecret={localStorage.getItem('password')}     //userSecret- get from localstorage
             onNewMessage={() => new Audio('https://chat-engine-assets.s3.amazonaws.com/click.mp3').play()} //Audio notification for new message
-            renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />} //renders the custom chat feed
+           // renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />} //renders the custom chat feed
             renderChatSettings={(chatAppProps) =>< ChatSettings{...chatAppProps}/>}
         />    
     );

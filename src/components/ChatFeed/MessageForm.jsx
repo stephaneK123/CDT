@@ -129,13 +129,6 @@ const MessageForm = (props) => {
           <Input accept="image/*" id="icon-button-file" type="file" onChange={handleUpload.bind(this)} />
         </label>
 
-        <IconButton color="primary" aria-label="List" onClick={buildList} >
-          <FormatListNumberedIcon />
-        </IconButton>
-
-        <IconButton color="primary" aria-label="Poll" onClick={buildPoll}>
-          <PollIcon />
-        </IconButton>
 
         <IconButton color="primary" aria-label="emoji" onClick={() => setShowPicker(showPicker=> !showPicker)}>
           <EmojiEmotionsIcon />
