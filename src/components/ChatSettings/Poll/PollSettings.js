@@ -20,6 +20,12 @@ const PollSettings = () => {
         })
     }
 
+      /* Build a poll */
+   function buildPoll() {
+    const url ="https://strawpoll.com/embed/1fjszdcbd";
+    window.open(url, '_isBlank');
+  }
+
     return (
         <div style={{ borderTop: '1px solid #f0f0f0' }} className='ce-photo-section'>
             <SettingsBlock
@@ -31,6 +37,7 @@ const PollSettings = () => {
                         value="Create Poll" 
                         id='poll-button'
                         style={{ width: '100%', marginBottom: '12px' }}
+                        OnClick= {buildPoll}
                     />  
                 <div className='poll-feed'>
                     <div style={{ height: '12px' }} />
