@@ -2,15 +2,13 @@ import React, { useContext } from 'react'
 
 import { ChatEngineContext, Button } from 'react-chat-engine'
 
-import Thumbnail from './Thumbnail'
-
 import SettingsBlock from './SettingsBlock'
 
 
 
 const PollSettings = () => {
     const { chats, activeChat } = useContext(ChatEngineContext)  
-    const chat = chats && chats[activeChat] 
+   
 
 
      /* Build a poll */
@@ -18,13 +16,6 @@ const PollSettings = () => {
     const url ="https://strawpoll.com/en/create/";
     window.open(url, '_isBlank');
   }
-
-      /* Build a poll */
-   function buildPoll() {
-    const url ="https://strawpoll.com/embed/1fjszdcbd";
-    window.open(url, '_isBlank');
-  }
-
     return (
         <div style={{ borderTop: '1px solid #f0f0f0' }} className='ce-photo-section'>
             <SettingsBlock
