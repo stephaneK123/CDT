@@ -4,7 +4,7 @@
 
 import {ChatEngine} from 'react-chat-engine';
 import LoginForm from './components/LoginForm/LoginForm.jsx';
-import ChatFeed from './components/ChatFeed/ChatFeed.jsx';
+// import ChatFeed from './components/ChatFeed/ChatFeed.jsx';
 import './App.css';
 //import PollSettings from './components/Poll/PollSettings.js';
 import ChatSettings from './components/ChatSettings/ChatSettings';

@@ -1,16 +1,11 @@
-import React, { useContext } from 'react'
 
-import { ChatEngineContext, Button } from 'react-chat-engine'
+import { Button } from 'react-chat-engine'
 
 import SettingsBlock from './SettingsBlock'
 
 
 
 const PollSettings = () => {
-    const { chats, activeChat } = useContext(ChatEngineContext)  
-   
-
-
      /* Build a poll */
    function buildPoll() {
     const url ="https://strawpoll.com/en/create/";
@@ -30,6 +25,8 @@ const PollSettings = () => {
                         style={{ width: '100%', marginBottom: '12px' }}
                         OnClick= {buildPoll}
                     />  
+
+                    <p>Create a poll and then enter the link to the poll with the link button in the message box.</p>
               
             </SettingsBlock>
         </div>

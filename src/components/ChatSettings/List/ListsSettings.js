@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { ChatEngineContext, Button } from 'react-chat-engine'
 import SettingsBlock from '../Poll/SettingsBlock'
-import {Card, Form, Row } from 'react-bootstrap';
+import {Card, Form, Row, Col} from 'react-bootstrap';
 
 
 const ListsSettings = () => {
@@ -60,20 +60,17 @@ const ListsSettings = () => {
       
         return (
           <Form onSubmit={handleSubmit}>
-          
+            <Form.Label>The List</Form.Label>
              <Form.Group>
-                 <Form.Control style={{ height: '20px' }}type="text" className="input" value={value}   onChange={e => setValue(e.target.value)} placeholder="Add new list item" />
+                 <Form.Control style={{ height: '10px'}}type="text" className="input" value={value} onChange={e => setValue(e.target.value)} placeholder="Add new item" />
+                 <Button type="submit" value="Add Item" /> 
              </Form.Group>
-           
-           
-             <Button type="submit" value="Add" /> 
-           
           </Form>
         );
       }
 
     return (
-        <div style={{ borderTop: '1px solid #f0f0f0' }} className='ce-photo-section'>
+        <div style={{ borderTop: '2px solid #f0f0f0' }} className='ce-photo-section'>
             <SettingsBlock
                 label='Lists'
                 className='ce-section-title-container ce-photo-title-container'

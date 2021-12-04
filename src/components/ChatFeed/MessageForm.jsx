@@ -10,8 +10,6 @@ import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined';
 import { sendMessage, isTyping} from 'react-chat-engine';
 import IconButton from '@mui/material/IconButton';
 import PhotoCamera from '@mui/icons-material/PhotoCamera';
-import FormatListNumberedIcon from '@mui/icons-material/FormatListNumbered';
-import PollIcon from '@mui/icons-material/Poll';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 import SendIcon from '@mui/icons-material/Send';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
@@ -73,20 +71,8 @@ const MessageForm = (props) => {
   };
 
   
-/*-------------------List and Poll-------------------------------*/
- 
-   /* Build a poll */
-   function buildPoll() {
-    const url ="https://strawpoll.com/embed/1fjszdcbd";
-    window.open(url, '_isBlank');
-  }
 
-  /* Build a list */
-  function buildList() {
-    alert('Build a List');
-  }
 
-  /*------------------------------------------------------------ */
 
    /* Styling for the upload button */
    const Input = styled('input')({
