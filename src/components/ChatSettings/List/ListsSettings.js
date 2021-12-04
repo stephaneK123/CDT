@@ -10,7 +10,7 @@ const ListsSettings = () => {
 
     const [todos, setTodos] = React.useState([
         {
-          text: "This is a sample item",
+          text: "This is a list item",
           isDone: false
         }
       ]);
@@ -41,8 +41,8 @@ const ListsSettings = () => {
           >
             <span style={{ textDecoration: todo.isDone ? "line-through" : "" }}>{todo.text}</span>
             <div>
-              <Button  onClick={() => markTodo(index)}>✓</Button>{' '}
-              <Button  onClick={() => removeTodo(index)}>X</Button>
+              <Button  onClick={() => markTodo(index)} value="✓" />
+              <Button  onClick={() => removeTodo(index)} value="X" />
             </div>
           </div>
         );
@@ -59,15 +59,15 @@ const ListsSettings = () => {
         };
       
         return (
-          <Form onSubmit={handleSubmit}> 
+          <Form onSubmit={handleSubmit}>
           
              <Form.Group>
-                 <Form.Control style={{ height: '20px' }}type="text" className="input" value={value}   onChange={e => setValue(e.target.value)} placeholder="Add new todo" />
+                 <Form.Control style={{ height: '20px' }}type="text" className="input" value={value}   onChange={e => setValue(e.target.value)} placeholder="Add new list item" />
              </Form.Group>
            
-            <Form.Group>
-                <Button type="submit">=Submit</Button> 
-            </Form.Group>
+           
+             <Button type="submit" value="Add" /> 
+           
           </Form>
         );
       }
@@ -102,8 +102,5 @@ const ListsSettings = () => {
         </div>
     )
 }
-
-
-
 
 export default ListsSettings
