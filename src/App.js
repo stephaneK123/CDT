@@ -15,6 +15,7 @@ import { Box } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import SimpleAccordion from "./components/helper/Accordion_mini.js";
 import DirectChatPage from "./components/helper/OnetoOne.js";
+import { sendMsg, getChatID } from "./components/helper/sendSKMsg.js";
 const App = () => {
   localStorage.clear();
   // if (!localStorage.getItem('username')) return <LoginForm />;
@@ -34,6 +35,12 @@ const App = () => {
           "https://chat-engine-assets.s3.amazonaws.com/click.mp3"
         ).play()
       }
+      //sending a message from "test" to "StephaneK"
+      //this will trigger when "StephaneK" is connected
+      onConnect={(creds) => {
+        // getChatID();
+        sendMsg(77863);
+      }}
       // one to one chat
 
       // Chat List
@@ -63,6 +70,8 @@ const App = () => {
 
       //improved chat settings
       renderChatSettings={(chatAppProps) => <ChatSettings {...chatAppProps} />}
+      //people's setting
+      renderPeopleSettings={(creds, chat) => {}}
 
       //removing photos setion
     />
