@@ -30,6 +30,7 @@ export const getChatID = () => {
 };
 
 export const sendMsg = (id) => {
+  localStorage.setItem("welcome", "true");
   //   debugger;
   const link = "https://api.chatengine.io/chats/" + id + "/messages/";
   const headers = {

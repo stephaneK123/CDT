@@ -16,7 +16,7 @@ const ChatSettings = (props) => {
   const chat = chats && chats[activeChat];
 
   if (conn === null) return <div />;
-  let people = ["Alex", "Stephane", "John"];
+  let people = ["SeanG", "Stephane", "John"];
 
   <ChatEngineWrapper
     onConnect={(creds) => {
