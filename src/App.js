@@ -16,6 +16,7 @@ import Typography from "@mui/material/Typography";
 import SimpleAccordion from "./components/helper/Accordion_mini.js";
 import DirectChatPage from "./components/helper/OnetoOne.js";
 import { sendMsg, getChatID } from "./components/helper/sendSKMsg.js";
+
 const App = () => {
   localStorage.clear();
   // if (!localStorage.getItem('username')) return <LoginForm />;
@@ -65,7 +66,7 @@ const App = () => {
       //People Settings
 
       //Photo Settings
-      renderPhotosSettings={(chat) => {}}
+      // renderPhotosSettings={(chat) => {}}
       //Options Settings
 
       //improved chat settings

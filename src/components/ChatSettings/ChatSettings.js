@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { ChatEngineContext } from "react-chat-engine";
+import { ChatEngineContext, ChatEngineWrapper } from "react-chat-engine";
 
 import { PeopleSettings } from "react-chat-engine";
 import { PhotosSettings } from "react-chat-engine";
@@ -9,12 +9,21 @@ import { ChatSettingsTop } from "react-chat-engine";
 import PollSettings from "./Poll/PollSettings";
 import ListsSettings from "./List/ListsSettings";
 import DirectChatPage from "../helper/OnetoOne";
-
+import SimpleAccordion from "../helper/Accordion_mini";
+// import ShowLogo from "../helper/ShowLogo";
 const ChatSettings = (props) => {
   const { conn, chats, activeChat } = useContext(ChatEngineContext);
   const chat = chats && chats[activeChat];
 
   if (conn === null) return <div />;
+  let people = ["Alex", "Stephane", "John"];
+
+  <ChatEngineWrapper
+    onConnect={(creds) => {
+      debugger;
+      let x = 0;
+    }}
+  />;
 
   return (
     <>
@@ -27,6 +36,8 @@ const ChatSettings = (props) => {
             props.renderChatSettingsTop(conn, chat)
           ) : (
             <ChatSettingsTop />
+            //improved
+            // <ShowLogo />
           )}
 
           {props.renderPeopleSettings ? (
@@ -44,7 +55,9 @@ const ChatSettings = (props) => {
           {props.renderPollSettings ? (
             props.renderPollSettings(chat)
           ) : (
-            <PollSettings />
+            // <PollSettings />
+
+            <SimpleAccordion title="People" people={people} />
           )}
 
           {props.renderListsSettings ? (
@@ -62,10 +75,6 @@ const ChatSettings = (props) => {
               )}
             </div>
           )}
-        </div>
-        <div>
-          {" "}
-          <DirectChatPage creds={props.creds} />
         </div>
       </div>
     </>

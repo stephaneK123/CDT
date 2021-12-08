@@ -2,6 +2,8 @@ import React from "react";
 import axios from "axios";
 import { ChatEngine } from "react-chat-engine";
 
+export const getPeoplesName = () => {};
+
 export const getChatID = () => {
   const cchatID = 0;
   const headers = {
