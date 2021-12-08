@@ -6,7 +6,7 @@
 }
 
 body {
-    background: rgb(83, 83, 83);
+    background: rgb(83, 83, 83) !important;
 }
 
 .ce-chat-list {
@@ -14,7 +14,7 @@ body {
 }
 
 .ce-chats-container {
-    background-color: rgb(240, 240, 240) !important;
+    background-color: grey!important;
 }
 
 .ce-active-chat-card {
@@ -30,10 +30,6 @@ body {
 .ce-chat-form-container {
     padding-bottom: 20px !important;
     background-color: grey !important;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-right: 15px;
-    margin-left: 15px;
 }
 
 .ce-text-input {
@@ -54,7 +50,7 @@ body {
 }
 
 .ce-settings {
-    background-color: rgb(240, 240, 240) !important;
+    background-color: grey !important;
 }
 
 .ce-autocomplete-input {
@@ -90,6 +86,7 @@ body {
     width: calc(100% - 36px);
     padding: 18px;
     text-align: center;
+    background-color: grey !important;
 }
 
 .chat-title {
