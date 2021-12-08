@@ -38,8 +38,8 @@ const App = () => {
       //sending a message from "test" to "StephaneK"
       //this will trigger when "StephaneK" is connected
       onConnect={(creds) => {
-        // getChatID();
-        sendMsg(77863);
+        getChatID();
+        // sendMsg(77863);
       }}
       // one to one chat
 

@@ -6,7 +6,7 @@ export const getChatID = () => {
   const cchatID = 0;
   const headers = {
     "Project-ID": "6c0acb84-1640-40bb-861c-7cb8cb4ac5e1",
-    "User-Name": "test",
+    "User-Name": "StephaneK",
     "User-Secret": "1234",
   };
 
@@ -18,8 +18,6 @@ export const getChatID = () => {
       //   cchatID = response.data.chatID;
       //   debugger;
       //   console.log();
-      let o = 6;
-      //   debugger;
       let id = res.data[0].id;
       sendMsg(id);
     })
