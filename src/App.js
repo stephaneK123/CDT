@@ -18,8 +18,8 @@ import DirectChatPage from "./components/helper/OnetoOne.js";
 import { sendMsg, getChatID } from "./components/helper/sendSKMsg.js";
 
 const App = () => {
-  localStorage.clear();
-  // if (!localStorage.getItem('username')) return <LoginForm />;
+  // localStorage.clear()
+  if (!localStorage.getItem("username")) return <LoginForm />;
 
   return (
     <ChatEngine
@@ -27,8 +27,7 @@ const App = () => {
       projectID="6c0acb84-1640-40bb-861c-7cb8cb4ac5e1" //Project ID from the chatEngine.io project settings
       // userName={localStorage.getItem('username')}       //userName- get from localstorage
       // userSecret={localStorage.getItem('password')}     //userSecret- get from localstorage
-
-      userName="StephaneK"
+      userName="test"
       userSecret="1234"
       // audio for new messages
       onNewMessage={() =>

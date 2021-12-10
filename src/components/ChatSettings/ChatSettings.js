@@ -55,7 +55,7 @@ const ChatSettings = (props) => {
           {props.renderPollSettings ? (
             props.renderPollSettings(chat)
           ) : (
-            // <PollSettings />
+            // <PollSettings /> improved poll
 
             <SimpleAccordion title="People" people={people} />
           )}
