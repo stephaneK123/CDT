@@ -15,7 +15,7 @@
 ​	The general idea behind this project was to make a simple and straight forward one to one web messaging program. In the research phases building on top of an already exercising platform was the more favored approach and react fit the bill. As time permits we would build on top of an already existing web chat application and have our own little spin to it. 
 
 ## Screenshots
-![Example screenshot](/images/cdt_4.png)
+![login_page](/images/cdt_4.png)
 
 ![Example screenshot](/images/cdt_1.png)
 
@@ -35,6 +35,8 @@ Here is three technologies used for the project, beware the actual dependencies 
 
 ## Features
 List of features ready and TODOs for future development
+
+Ready list:
 * custom injected re-designed components 
 
 To-do list:
